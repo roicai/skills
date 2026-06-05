@@ -3,8 +3,7 @@
 Agent skill for the [ROIC.ai Financial Data API](https://www.roic.ai/api). Gives an AI coding
 assistant everything it needs to build, call, and debug integrations against
 `https://api.roic.ai` — correct endpoint paths, parameters, response shapes, and **plan-based
-rate limits** (requests/minute + history depth), so generated client code works in production
-instead of failing with `429`/`403`.
+rate limits** (requests/minute + history depth).
 
 Covers all 31 endpoints across 9 groups: tickers/discovery, market-data reference, company
 profile & news, earnings-call transcripts, stock prices, stock splits, financial statements
@@ -32,7 +31,7 @@ param, or any request to fetch fundamentals/prices for a project.
 ## Contents
 
 ```
-api/roicai-api/
+skills/roicai-api/
 ├── SKILL.md                         # overview, auth, plan limits, endpoint index, errors
 └── references/
     ├── endpoints.md                 # all 31 endpoints: params, when-to-use, response shape
@@ -44,7 +43,7 @@ api/roicai-api/
 Copy the skill into your agent's skills directory:
 
 ```bash
-cp -r api/roicai-api ~/.claude/skills/roicai-api
+cp -r skills/roicai-api ~/.claude/skills/roicai-api
 ```
 
 ## Plans & rate limits (summary)
@@ -57,7 +56,7 @@ cp -r api/roicai-api ~/.claude/skills/roicai-api
 | Enterprise   | Unlimited\*       | All available |
 
 \* No published per-minute cap; still enforced server-side against a high safety cap.
-Full detail in [`references/plans-and-limits.md`](api/roicai-api/references/plans-and-limits.md).
+Full detail in [`references/plans-and-limits.md`](skills/roicai-api/references/plans-and-limits.md).
 
 ## Links & SEO
 
